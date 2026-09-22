@@ -304,7 +304,6 @@ transform:translateX(-55%) rotate(8deg);transition:transform .9s ease;pointer-ev
     <input class="field" id="email" type="email" placeholder="الإيميل" required>
     <input class="field" id="contactInfo" placeholder="رقم الهاتف / Discord" required>
     <select class="field" id="service" required><option value="" disabled selected>اختر الخدمة</option><option>Website</option><option>Logo / Branding</option><option>Discord Server</option><option>Discord System / Bot</option><option>Montage / Video</option><option>خدمة أخرى</option></select>
-    <input class="field" id="budget" placeholder="الميزانية" required>
     <input class="field" id="deadline" placeholder="المدة / Deadline" required>
     <textarea class="field" id="message" placeholder="تفاصيل المشروع..." required></textarea>
     <button class="btn primary" type="submit">إرسال طلب المشروع ↗</button>
@@ -330,7 +329,6 @@ function sendRequest(e){
  const email = document.getElementById('email').value.trim();
  const c = document.getElementById('contactInfo').value.trim();
  const s = document.getElementById('service').value;
- const b = document.getElementById('budget').value.trim();
  const d = document.getElementById('deadline').value.trim();
  const m = document.getElementById('message').value.trim();
 
@@ -342,9 +340,6 @@ Email: ${email}
 
 Service:
 ${s}
-
-Budget:
-${b}
 
 Deadline:
 ${d}
